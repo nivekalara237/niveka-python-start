@@ -13,3 +13,15 @@ class BdConnect:
             )
 
         cursor = db.cursor()
+
+    def insertion( self, namebd, nameUser, loginUser, passUser):
+        self.namebd = namebd
+        self.nameUser = nameUser
+        self.loginUser = loginUser
+        self.passUser = passUser 
+
+        inserer = (""INSERT INTO user ""(name, login, password) " "VALUES (%s, %s, %s,)")")
+
+        inserer = (namebd, nameUser, passUser)
+        
+
